@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
+
+        stage('Checkout Code') {
             steps {
-                git 'https://github.com/VEDANTPANDEY35/meta-learning-stocks.git'
+                checkout scm
             }
         }
 
@@ -23,5 +24,6 @@ pipeline {
                 }
             }
         }
+
     }
 }
